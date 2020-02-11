@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Catch all routes and map them to the index
+ * method of HomeController which will simply
+ * return the home view so we can let reactjs
+ * handle all the application routing.
+ */
+Route::get('/{any}', 'HomeController@index')->where('any', '.*');
