@@ -4,7 +4,6 @@ import Home from '../home/Home'
 import ProductIndex from '../products/ProductIndex';
 import ProductCreate from '../products/ProductCreate';
 import ProductEdit from '../products/ProductEdit';
-import ProductShow from '../products/ProductShow';
 
 class AppRouter extends Component {
     render() {
@@ -14,7 +13,6 @@ class AppRouter extends Component {
                 <Route exact path="/products" component={ProductIndex} />
                 <Route exact path="/products/create" component={ProductCreate} />
                 <Route exact path="/products/:id/edit" component={ProductEdit} />
-                <Route exact path="/products/:id" component={ProductShow} />
             </Switch>
         )
     }
